@@ -4,6 +4,8 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
+    font-size: 1em; /* Usando unidade relativa para permitir zoom do navegador */
+    line-height: 1.6; /* Melhora a legibilidade do texto */
 }
 
 header {
@@ -15,6 +17,11 @@ header {
 
 header h1 {
     margin-bottom: 5px;
+    font-size: 2em; /* Usando unidade relativa */
+}
+
+header p {
+    font-size: 1.2em; /* Usando unidade relativa */
 }
 
 main {
@@ -36,6 +43,7 @@ section {
 section h2 {
     color: #337ab7; /* Azul que remete à cidade */
     margin-bottom: 15px;
+    font-size: 1.8em; /* Usando unidade relativa */
 }
 
 #campo, #cidade {
@@ -46,6 +54,10 @@ section h2 {
     flex: 1;
     padding: 20px;
     text-align: left;
+}
+
+#campo .conteudo h3, #cidade .conteudo h3 {
+    font-size: 1.4em; /* Usando unidade relativa */
 }
 
 #campo .imagem, #cidade .imagem {
@@ -68,6 +80,10 @@ section h2 {
     text-align: left;
 }
 
+#beneficios ul li, #campo ul li, #cidade ul li {
+    margin-bottom: 0.5em; /* Espaçamento para melhor leitura */
+}
+
 #celebracao button {
     background-color: #f0ad4e; /* Amarelo que remete à união */
     color: white;
@@ -75,12 +91,17 @@ section h2 {
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1em; /* Usando unidade relativa */
     transition: background-color 0.3s ease;
 }
 
 #celebracao button:hover {
     background-color: #eea236;
+}
+
+#celebracao button:focus {
+    outline: 2px solid #007bff; /* Adicionando um foco visível para navegação por teclado */
+    outline-offset: 2px;
 }
 
 footer {
@@ -91,9 +112,19 @@ footer {
     position: sticky;
     bottom: 0;
     width: 100%;
+    font-size: 0.9em; /* Usando unidade relativa */
 }
 
-/* Media queries para responsividade */
+/* Estilo para o foco visível em outros elementos interativos (se houver) */
+a:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+}
+
+/* Media queries para responsividade (mantendo como estava) */
 @media (max-width: 768px) {
     #campo, #cidade {
         flex-direction: column;
