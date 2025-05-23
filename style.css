@@ -1,0 +1,114 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #5cb85c; /* Verde que remete ao campo */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 5px;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+section h2 {
+    color: #337ab7; /* Azul que remete à cidade */
+    margin-bottom: 15px;
+}
+
+#campo, #cidade {
+    flex-direction: row;
+}
+
+#campo .conteudo, #cidade .conteudo {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+}
+
+#campo .imagem, #cidade .imagem {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#campo img, #cidade img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+#beneficios ul, #campo ul, #cidade ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left;
+}
+
+#celebracao button {
+    background-color: #f0ad4e; /* Amarelo que remete à união */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#celebracao button:hover {
+    background-color: #eea236;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media queries para responsividade */
+@media (max-width: 768px) {
+    #campo, #cidade {
+        flex-direction: column;
+    }
+
+    #campo .conteudo, #cidade .conteudo,
+    #campo .imagem, #cidade .imagem {
+        width: 100%;
+    }
+
+    section {
+        text-align: center;
+    }
+
+    #beneficios ul, #campo ul, #cidade ul {
+        text-align: left;
+    }
+}
